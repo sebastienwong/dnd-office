@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+        <script src="./script.js"></script>
+        <script src="./socket.js"></script>
+    </head>
+    <body>
+      <div class="screen" id="login-screen">
+        <h1>ENTER EMPLOYEE ID</h1>
+        <h2 id="login-enter"></h2>
+        <p id="login-error">NO MATCHING ID</p>
+      </div>
+
+      <div class="screen" id="home-screen">
+        <h1 id="home-name"></h1>
+        <button id="home-work" onclick="workClicked()">WORK</button>
+        <button id="home-email" onclick="emailClicked()">EMAIL<span>*</span></button>
+      </div>
+
+      <div class="screen" id="work-screen">
+        <h1 class="back" onclick="goBack()">&lt</h1>
+        <div class="work-container" id="words-container">
+          <div id="work-whole-word">
+            <h1 class="work-word" id="work-word-complete"></h1>
+            <h1 class="work-word" id="work-word-incomplete"></h1>
+          </div>
+        </div>
+        <div class="work-container" id="match-container">
+          <button class="match-button"></button>
+          <button class="match-button"></button>
+          <button class="match-button"></button>
+          <button class="match-button"></button>
+          <button class="match-button"></button>
+          <button class="match-button"></button>
+        </div>
+        <h1 id="work-counter"></h1>
+      </div>
+
+      <div class="screen" id="email-screen">
+        <h1 class="back" onclick="goBack()">&lt</h1>
+        <table id="email-table">
+          <tr>
+            <th style="width: 25%">FROM</th>
+            <th style="width: 25%">SUBJECT</th>
+            <th style="width: 50%">MESSAGE</th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="warning">
+        <div class="warning-modal">
+          <h1 class="warning-heading"></h1>
+          <h2 class="warning-body"></h2>
+          <span class="modal-close" onclick="closeModal('warning')">x</span>
+        </div>
+      </div>
+
+      <div class="new-email">
+        <div class="new-email-modal">
+          <span class="modal-close" onclick="closeModal('new-email')">x</span>
+          <h3 class="new-email-heading">YOU HAVE MAIL</h3>
+        </div>
+      </div>
+
+    </body>
+</html>
+
