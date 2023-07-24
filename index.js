@@ -6,12 +6,22 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
+const DOMAIN = "https://dnd-office.onrender.com/";
+
 const fs = require('fs');
 const e = require("express");
 //const database = require('./test.json');
 
 app
 .use(express.static(path.join(__dirname, "/public")))
+.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", DOMAIN);
+  res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+})
 .get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 })
