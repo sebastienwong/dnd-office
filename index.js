@@ -6,7 +6,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-const DOMAIN = "https://dnd-office.onrender.com/";
+const PORT = process.env.PORT || 6600;
 
 const fs = require('fs');
 const e = require("express");
@@ -14,14 +14,6 @@ const e = require("express");
 
 app
 .use(express.static(path.join(__dirname, "/public")))
-.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", DOMAIN);
-  res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-})
 .get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 })
@@ -55,8 +47,8 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(6600, () => {
-  console.log('listening on *:6600');
+server.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`);
 });
 
 
