@@ -1,0 +1,9 @@
+#login-enter {
+  margin-top: 0;
+  height: 26px;
+}
+
+#login-error {
+  visibility: hidden;
+  color: red;
+}

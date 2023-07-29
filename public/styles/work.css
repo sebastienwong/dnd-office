@@ -1,0 +1,71 @@
+#work-screen {
+  display: none;
+}
+
+.work-container {
+  display: none;
+}
+
+#work-counter {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  margin: 0;
+}
+
+#work-whole-word {
+  display: flex;
+}
+
+.work-word {
+  margin: 0;
+
+  letter-spacing: 5px;
+}
+
+#work-word-complete {
+  color: lime;
+}
+
+
+/* MATCH STYLES */
+
+#match-container {
+  width: 45%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.match-button {
+  font-size: 32px;
+  font-family: 'VT323';
+
+  width: 200px;
+  height: 100px;
+
+  color: white;
+  background-color: transparent;
+  border: 5px solid white;
+
+  margin: 0px;
+}
+
+.match-button.selected {
+  color: black;
+  background-color: white;
+  border: 5px dashed lime;
+}
+
+.match-button.matched {
+  color: lime;
+  border: none;
+}
+
+.match-button:not(.matched):hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}

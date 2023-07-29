@@ -1,11 +1,36 @@
 {
-  "TEST": "DATABASE",
   "users": {
     "1234": {
       "name": "DEV ACCOUNT",
+      "department": "CODING",
       "work_type": "match",
       "emails": {
         "1": {
+          "from": "Cassandra Palmer",
+          "subject": "Welcome",
+          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
+        },
+        "2": {
+          "from": "Jason",
+          "subject": "Yoga",
+          "message": "Hey Kevin,\nI know you've been going through something these past few days. Just want to check in.\nLast year my mom went through something similar, but she started going to hot yoga and it really helped! It was a place called Namaste, you should look into it. I hear it can be good for paranoia.\nAll the best,\nJason"
+        },
+        "3": {
+          "from": "Sentinel Insurance",
+          "subject": "Welcome",
+          "message": "Hi KEVIN!\nThanks for opening a new life insurance account with us. We're so glad to have you!\nWe'll reach out soon with the next steps.\nThanks for putting your life in our hands,\nAbigail\n\n\nSentinel Insurance Associate"
+        },
+        "4": {
+          "from": "Leonard Burton",
+          "subject": "HR Meeting",
+          "message": "Hello Kevin,\nPlease report to HR at 9:30 AM today.\nWarmly,\nLenny"
+        },
+        "5": {
+          "from": "Cassandra Palmer",
+          "subject": "Welcome",
+          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
+        },
+        "6": {
           "from": "Cassandra Palmer",
           "subject": "Welcome",
           "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
@@ -13,59 +38,34 @@
       }
     },
     "2512": {
-      "name": "ACCOUNT 5",
-      "work_type": "words",
-      "emails": {
-        "1": {
-          "from": "Cassandra Palmer",
-          "subject": "Welcome",
-          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
-        }
-      }
+      "name": "Katelyn",
+      "department": "ASED",
+      "work_type": "match",
+      "emails": {}
     },
     "4241": {
-      "name": "ACCOUNT 1",
+      "name": "Aiden",
+      "department": "ASED",
       "work_type": "words",
-      "emails": {
-        "1": {
-          "from": "Cassandra Palmer",
-          "subject": "Welcome",
-          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
-        }
-      }
+      "emails": {}
     },
     "5684": {
-      "name": "ACCOUNT 2",
+      "name": "Katie",
+      "department": "ASED",
       "work_type": "words",
-      "emails": {
-        "1": {
-          "from": "Cassandra Palmer",
-          "subject": "Welcome",
-          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
-        }
-      }
+      "emails": {}
     },
     "8350": {
-      "name": "ACCOUNT 3",
-      "work_type": "words",
-      "emails": {
-        "1": {
-          "from": "Cassandra Palmer",
-          "subject": "Welcome",
-          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
-        }
-      }
+      "name": "Van",
+      "department": "ASED",
+      "work_type": "match",
+      "emails": {}
     },
     "0084": {
-      "name": "ACCOUNT 4",
+      "name": "Kayla",
+      "department": "ASED",
       "work_type": "words",
-      "emails": {
-        "1": {
-          "from": "Cassandra Palmer",
-          "subject": "Welcome",
-          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
-        }
-      }
+      "emails": {}
     }
   },
   "words": {

@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
 
         <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
@@ -14,7 +14,12 @@
 
         <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 
-        <script src="./script.js"></script>
+        <script src="./main.js"></script>
+        <script src="./scripts/login.js"></script>
+        <script src="./scripts/home.js"></script>
+        <script src="./scripts/work.js"></script>
+        <script src="./scripts/email.js"></script>
+
         <script src="./socket.js"></script>
     </head>
     <body>
@@ -26,8 +31,10 @@
 
       <div class="screen" id="home-screen">
         <h1 id="home-name"></h1>
-        <button id="home-work" onclick="workClicked()">WORK</button>
-        <button id="home-email" onclick="emailClicked()">EMAIL<span>*</span></button>
+        <h2 id="home-department"></h2>
+        <a id="home-logout" onclick="logout()"">LOGOUT</a>
+        <button class="home-button" id="home-work" onclick="workClicked()">WORK</button>
+        <button class="home-button" id="home-email" onclick="emailClicked()">EMAIL<span>*</span></button>
       </div>
 
       <div class="screen" id="work-screen">
@@ -58,6 +65,13 @@
             <th style="width: 50%">MESSAGE</th>
           </tr>
         </table>
+        <div id="email-grid">
+          <div class="email-row">
+            <div class="email-header email-from">FROM</div>
+            <div class="email-header email-subject">SUBJECT</div>
+            <div class="email-header email-message">MESSAGE</div>
+          </div>
+        </div>
       </div>
 
       <div class="warning">
@@ -72,6 +86,21 @@
         <div class="new-email-modal">
           <span class="modal-close" onclick="closeModal('new-email')">x</span>
           <h3 class="new-email-heading">YOU HAVE MAIL</h3>
+        </div>
+      </div>
+
+      <div class="reply-email">
+        <div class="reply-modal">
+          <h3>REPLY</h3>
+          <div class="reply-input">
+            <label>To</label><input type="text" id="reply-to">
+          </div>
+          <div class="reply-input">
+            <label>Subject</label><input type="text" id="reply-subject">
+          </div>
+          <textarea id="reply-body"></textarea>
+          <span class="reply-send">SEND</span>
+          <span class="modal-close" onclick="closeModal('reply-email')">x</span>
         </div>
       </div>
 

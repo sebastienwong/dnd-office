@@ -1,16 +1,22 @@
 let all_data;
 
-fetch('../data.json')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    all_data = data;
-
-    setup();
-  })
-  .catch(error => console.log(error));
-
 var socket = io();
+
+socket.on('all_data', function(data) {
+  all_data = data;
+
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(all_data));
+  $('.download').attr('href', dataStr);
+
+  setup();
+})
+
+socket.on('email', function(data) {
+  let all_data = data;
+
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(all_data));
+  $('.download').attr('href', dataStr);
+})
 
 function setup() {
   let ids = Object.keys(all_data.users);
@@ -36,6 +42,10 @@ function sendChange(select) {
   let val = select.value;
   $('.input-field').hide();
   $(`#${val}-text`).show();
+}
+
+function download() {
+  socket.emit('download');
 }
 
 

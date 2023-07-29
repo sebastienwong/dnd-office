@@ -18,7 +18,7 @@ app
   res.sendFile(__dirname + '/public/index.html');
 })
 .get('/dm', (req, res) => {
-  res.sendFile(__dirname + '/public/dm/dungeonmaster.html');
+  res.sendFile(__dirname + '/public/dm/dm.html');
 });;
 
 let all_data;
@@ -62,14 +62,24 @@ function createEmail(data) {
   if(data.id == 'all') {
     let user_ids = Object.keys(all_data.users);
     for(let i = 0; i < user_ids.length; i++) {
-      let last_id = Object.keys(all_data.users[user_ids[i]].emails)[Object.keys(all_data.users[user_ids[i]].emails).length-1];
-      let new_id = (Number(last_id) + 1).toString();
+      let email_ids = Object.keys(all_data.users[user_ids[i]].emails);
+      let new_id = '0';
+
+      if(email_ids.length != 0) {
+        let last_id = email_ids[email_ids.length-1];
+        new_id = (Number(last_id) + 1).toString();
+      }
 
       all_data.users[user_ids[i]].emails[new_id] = new_email;
     }
   } else {
-    let last_id = Object.keys(all_data.users[data.id].emails)[Object.keys(all_data.users[data.id].emails).length-1];
-    let new_id = (Number(last_id) + 1).toString();
+    let email_ids = Object.keys(all_data.users[data.id].emails);
+    let new_id = '0';
+
+    if(email_ids.length != 0) {
+      let last_id = email_ids[email_ids.length-1];
+      new_id = (Number(last_id) + 1).toString();
+    }
 
     all_data.users[data.id].emails[new_id] = new_email;
   }
