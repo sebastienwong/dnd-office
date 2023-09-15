@@ -32,7 +32,7 @@ function setupWork() {
     }
 
   // Setup words work
-  } else {
+  } else if(user.work_type == "words" || user.work_type == "boss") {
     $('#words-container').show();
 
     // Get word to type
@@ -41,6 +41,8 @@ function setupWork() {
 
     $('#work-word-incomplete').html(incomplete_word);
     $('#work-word-complete').html(complete_word);
+  } else {
+    $('#no-work-container').show();
   }
 
   $('#work-counter').text(counter);
@@ -48,18 +50,31 @@ function setupWork() {
 
 function pickWord() {
   // From all categories except equipment, gather all words and pick one
-  let categories = Object.keys(words);
-  let index = categories.indexOf('equipment');
-  if (index !== -1) {
-    categories.splice(index, 1);
+  let category;
+
+  if(user.work_type == "boss") {
+    category = words["business"];
+  } else {
+    let categories = Object.keys(words);
+    let index = categories.indexOf('equipment');
+    if (index !== -1) {
+      categories.splice(index, 1);
+    }
+    index = categories.indexOf('business');
+    if (index !== -1) {
+      categories.splice(index, 1);
+    }
+
+    category = words[categories[categories.length * Math.random() << 0]];
   }
-  let category = words[categories[categories.length * Math.random() << 0]];
-  let word = category[Math.floor(Math.random()*category.length)].toUpperCase().replace(' ', '&nbsp');
+  
+  
+  let word = category[Math.floor(Math.random()*category.length)].toUpperCase().replaceAll(' ', '&nbsp');
   return word;
 }
 
 function workType(char) {
-  if(user.work_type == "words") {
+  if(user.work_type == "words" || user.work_type == "boss") {
     // Check if typed char == next letter
     if(char == incomplete_word.charAt(0)) {
       // If not last letter

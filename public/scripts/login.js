@@ -46,6 +46,7 @@ function logout() {
   // Empty user data
   updateUser();
 
+  closeModal('new-email');
   $('#home-screen').hide();
   $('#login-screen').css('display', 'flex');
   stage = 1;

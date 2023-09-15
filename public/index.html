@@ -53,6 +53,9 @@
           <button class="match-button"></button>
           <button class="match-button"></button>
         </div>
+        <div class="work-container" id="no-work-container">
+          <h1 >NO WORK FOUND</h1>
+        </div>
         <h1 id="work-counter"></h1>
       </div>
 
@@ -99,7 +102,7 @@
             <label>Subject</label><input type="text" id="reply-subject">
           </div>
           <textarea id="reply-body"></textarea>
-          <span class="reply-send">SEND</span>
+          <span class="reply-send" onclick="sendReply()">SEND</span>
           <span class="modal-close" onclick="closeModal('reply-email')">x</span>
         </div>
       </div>

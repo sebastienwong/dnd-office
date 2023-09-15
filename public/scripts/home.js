@@ -19,6 +19,7 @@ function emailClicked() {
 
   //Show work screen
   $('#email-screen').css('display', 'flex');
+  closeModal('new-email');
 
   updatePageStatus(4, "home", "email");
 }

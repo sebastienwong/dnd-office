@@ -38,13 +38,19 @@ io.on('connection', (socket) => {
     createEmail(data);
     try {
       string_database = JSON.stringify(all_data, null, 2);
-      fs.writeFileSync('./testdb.json', string_database, "utf8");
+      fs.writeFileSync('./database.json', string_database, "utf8");
       console.log("Email successfully saved");
       io.emit('email', all_data);
     } catch (error) {
       console.log("An error has occurred ", error);
     }
   });
+
+  socket.on('reply', (data) => {
+    console.log(data);
+
+    io.emit('reply', data);
+  })
 });
 
 server.listen(PORT, () => {
@@ -88,7 +94,7 @@ function createEmail(data) {
 
 function loadData() {
   /*
-  fs.readFile("./testdb.json", "utf8", (err, jsonString) => {
+  fs.readFile("./database.json", "utf8", (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err);
       return;
@@ -104,6 +110,6 @@ function loadData() {
   });
   */
 
-  all_data = JSON.parse(fs.readFileSync('./testdb.json'));
+  all_data = JSON.parse(fs.readFileSync('./database.json'));
   console.log('Sync database read');
 }

@@ -58,7 +58,7 @@ td {
 
 .email-cell {
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
 
   white-space: pre-wrap;
 
@@ -90,6 +90,8 @@ td {
 
 .email-message.email-cell {
   grid-column: 3 / 4;
+  /* NO REPLY
+  grid-column: 3 / 5; */
 }
 
 .email-reply {

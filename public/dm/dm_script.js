@@ -18,10 +18,18 @@ socket.on('email', function(data) {
   $('.download').attr('href', dataStr);
 })
 
+socket.on('reply', function(data) {
+  let reply = data;
+
+  $('.replies').append(`<div style="border: black 1px solid; margin-top: 20px"><p>From: ${reply.from}</p><p>To: ${reply.to}</p><p>${reply.text}</p></div>`);
+})
+
 function setup() {
+  $('.user-select').find('option').remove();
+  
   let ids = Object.keys(all_data.users);
   for(let i = 0; i < ids.length; i++) {
-    $('.user-select').append(`<option value="${ids[i]}"> ${ids[i]} </option>`);
+    $('.user-select').append(`<option value="${ids[i]}"> ${all_data.users[ids[i]].name}</option>`);
   }
 }
 

@@ -1,9 +1,89 @@
 {
   "users": {
-    "1234": {
+    "1216893": {
+      "name": "Dante",
+      "department": "ASED",
+      "work_type": "match",
+      "emails": {
+        "0": {
+          "from": "Jennevelle Gilthana",
+          "subject": "Gilthana Fundraiser",
+          "message": "Dante,\n\nThe fundraiser is this Friday, and I really think you should be there. You don't have to stay long, you can even bring a plus one.\n\nPlease think about it. Let me know.\n\nJennevelle"
+        }
+      }
+    },
+    "2668605": {
+      "name": "Kevin",
+      "department": "Finance",
+      "work_type": "fired",
+      "emails": {
+        "0": {
+          "from": "Laura Hopkins",
+          "subject": "Yoga",
+          "message": "Hey Kevin,\n\nI know you've been going through something these past few days. Just want to check in.\nLast year my mom went through something similar, but she started going to hot yoga and it really helped! It was a place called Inner Circle, you should look into it. I hear it can be good for paranoia.\n\nAll the best,\nLaura"
+        },
+        "1": {
+          "from": "Sentinel Insurance",
+          "subject": "Welcome",
+          "message": "Hi KEVIN!\n\nThanks for opening a new life insurance account with us. We're so glad to have you!\nWe'll reach out soon with the next steps.\n\nThanks for putting your life in our hands,\nAbigail\nSentinel Insurance"
+        },
+        "2": {
+          "from": "Leonard Burton",
+          "subject": "HR Meeting",
+          "message": "Hello Kevin,\n\nPlease report to HR at 9:30AM today.\n\nWarmly,\nLenny"
+        }
+      }
+    },
+    "3547443": {
+      "name": "Belinda",
+      "department": "ASED",
+      "work_type": "words",
+      "emails": {
+        "0": {
+          "from": "Inner Circle",
+          "subject": "Spots Open",
+          "message": "Hi Belinda!\n\nIt's Chase from Inner Circle. I hope your chakras are in line this morning. Just letting you know we still have open spots for our Hot Weekend Sweat Sesh on Saturday. Let us know if you want us to put you down for a spot!\n\nNamaste\nChase\nInner Circle"
+        },
+        "1": {
+          "from": "Orug Jugg",
+          "subject": "Bad Thing",
+          "message": "Hello Belinda,\n\nBad thing happen in warehouse this morning. Malak hurt. Spilge not do anything. :(\n\nSad,\nOrug"
+        }
+      }
+    },
+    "5207182": {
+      "name": "Gaugamel",
+      "department": "ASED Head",
+      "work_type": "boss",
+      "emails": {
+        "0": {
+          "from": "Dr. Marcix",
+          "subject": "Breathing Exercises",
+          "message": "Hey Gaugamel!\n\nWanted to email to let you know that last week was a great session. The whole group felt your energy. Just know that if you put your mind to it, you can do anything. Looking forward to Tuesday.\n\nRemember to breathe!\nDr. Marc :)"
+        },
+        "1": {
+          "from": "Leonard Burton",
+          "subject": "New Hire",
+          "message": "Morning Gaugamel.\n\nJust reminding you that your new intern is starting today. Be sure to give them a warm welcome and show her the ropes.\n\nI'll stop by around 1pm to say hello and see how they're doing.\n\nWarmly,\nLenny"
+        }
+      }
+    },
+    "7964426": {
+      "name": "Yoralaia",
+      "department": "ASED",
+      "work_type": "words",
+      "emails": {
+        "0": {
+          "from": "Cassandra Palmer",
+          "subject": "Welcome",
+          "message": "Dear Yoralaia, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
+        }
+      }
+    },
+    "499331004": {
       "name": "DEV ACCOUNT",
       "department": "CODING",
-      "work_type": "match",
+      "work_type": "boss",
       "emails": {
         "1": {
           "from": "Cassandra Palmer",
@@ -31,41 +111,11 @@
           "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
         },
         "6": {
-          "from": "Cassandra Palmer",
-          "subject": "Welcome",
-          "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
+          "from": "DUde",
+          "subject": "Hello",
+          "message": "Man"
         }
       }
-    },
-    "2512": {
-      "name": "Katelyn",
-      "department": "ASED",
-      "work_type": "match",
-      "emails": {}
-    },
-    "4241": {
-      "name": "Aiden",
-      "department": "ASED",
-      "work_type": "words",
-      "emails": {}
-    },
-    "5684": {
-      "name": "Katie",
-      "department": "ASED",
-      "work_type": "words",
-      "emails": {}
-    },
-    "8350": {
-      "name": "Van",
-      "department": "ASED",
-      "work_type": "match",
-      "emails": {}
-    },
-    "0084": {
-      "name": "Kayla",
-      "department": "ASED",
-      "work_type": "words",
-      "emails": {}
     }
   },
   "words": {
@@ -123,6 +173,18 @@
       "Plate Armor",
       "Shield",
       "Staff"
+    ],
+    "business": [
+      "Cut corners",
+      "Reach out",
+      "Call it a day",
+      "Action points",
+      "Touch base",
+      "Get the ball rolling",
+      "Go the extra mile",
+      "Streamline",
+      "Expedite",
+      "Keep in the loop"
     ]
   }
 }

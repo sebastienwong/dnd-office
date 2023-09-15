@@ -37,6 +37,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  max-width: 830px;
 }
 
 .match-button {
@@ -68,4 +69,15 @@
   color: black;
   background-color: white;
   cursor: pointer;
+}
+
+
+/* NO WORK */
+
+#no-work-container {
+
+}
+
+#no-work-container h1 {
+  color: red;
 }

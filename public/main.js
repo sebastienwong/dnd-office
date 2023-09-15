@@ -64,7 +64,9 @@ function goBack() {
 
 function closeModal(el) {
   if(el == 'warning' || el == "reply-email") {
-    $(`.${el}`).hide()
+    $(`.${el}`).hide();
+    $('#reply-body').val('');
+    reply_to = "";
   } else if(el == 'new-email') {
     $(`.${el}`).css('right', '-300px');
   }
