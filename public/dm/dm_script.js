@@ -29,8 +29,10 @@ function setup() {
   
   let ids = Object.keys(all_data.users);
   for(let i = 0; i < ids.length; i++) {
-    $('.user-select').append(`<option value="${ids[i]}"> ${all_data.users[ids[i]].name}</option>`);
+    $('.user-select').append(`<option value="${ids[i]}">${all_data.users[ids[i]].name}</option>`);
   }
+
+  $('.user-select').append(`<option value="all">All</option>`);
 }
 
 function send() {
