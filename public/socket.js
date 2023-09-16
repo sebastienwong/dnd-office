@@ -16,9 +16,12 @@ socket.on('error', function(data) {
 })
 
 socket.on('email', function(data) {
-  updateData(data);
+  updateData(data.database);
   if(localStorage.getItem("employeeID") != null) {
     populateEmails();
-    newEmail();
+
+    if(data.id == 'all' || data.id == localStorage.getItem("employeeID")) {
+      newEmail();
+    }
   }
 })

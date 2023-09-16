@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
       string_database = JSON.stringify(all_data, null, 2);
       fs.writeFileSync('./database.json', string_database, "utf8");
       console.log("Email successfully saved");
-      io.emit('email', all_data);
+      io.emit('email', {id: data.id, database: all_data});
     } catch (error) {
       console.log("An error has occurred ", error);
     }

@@ -109,11 +109,6 @@
           "from": "Cassandra Palmer",
           "subject": "Welcome",
           "message": "Dear John, \nOn behalf of Iron Corp, I would like to welcome you to the company. Here at Iron Corp we strive to bring the brightest minds together, to create the brightest future. There's no doubt in my mind that the work you accoplish here will change the world.\nBest of luck,\nCassandra Palmer"
-        },
-        "6": {
-          "from": "DUde",
-          "subject": "Hello",
-          "message": "Man"
         }
       }
     }
